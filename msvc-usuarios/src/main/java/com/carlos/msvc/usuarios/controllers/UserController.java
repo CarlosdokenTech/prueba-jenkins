@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.carlos.msvc.usuarios.model.User;
 import com.carlos.msvc.usuarios.model.UserDto;
 import com.carlos.msvc.usuarios.services.UserServiceImpl;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/api/user")
@@ -28,6 +30,8 @@ public class UserController {
     UserController(UserServiceImpl userServiceImpl){
       this.userServiceImpl = userServiceImpl;
     }
+
+   
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
