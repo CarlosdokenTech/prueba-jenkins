@@ -31,11 +31,7 @@ public class UserController {
       this.userServiceImpl = userServiceImpl;
     }
 
-    @GetMapping("/saludo")
-    public String getSaludoo( String param) {
-        return "Hola ngrok";
-    }
-    
+   
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
