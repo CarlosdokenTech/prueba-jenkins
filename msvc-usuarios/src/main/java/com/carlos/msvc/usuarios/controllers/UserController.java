@@ -31,7 +31,7 @@ public class UserController {
       this.userServiceImpl = userServiceImpl;
     }
 
-   
+   //Conetamos para realizar el cambio
     @GetMapping
     public List<User> listarUsuario(){
       return userServiceImpl.getAllUsers();
