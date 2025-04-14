@@ -32,6 +32,11 @@ public class UserController {
     }
 
    
+    @GetMapping
+    public List<User> listarUsuario(){
+      return userServiceImpl.getAllUsers();
+        
+    }
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
@@ -40,11 +45,7 @@ public class UserController {
       return userServiceImpl.savedUser(user);
   }
 
-  @GetMapping
-  public List<User> listarUsuario(){
-    return userServiceImpl.getAllUsers();
-      
-  }
+ 
 
   @GetMapping("/dto")
    List<UserDto> listarDtos(){
